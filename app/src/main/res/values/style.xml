@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/middle_black_color</item>
+        <item name="colorOnPrimary">@color/green_color</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorOnSurface">@color/primary_black</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="colorSurface">@color/primary_gray_50</item>
+        <item name="colorSecondary">@color/green_color</item>
+        <item name="android:colorBackground">@color/middle_black_color</item>
+    </style>
+    <style name="mySpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/green_color</item>
+    </style>
+</resources>

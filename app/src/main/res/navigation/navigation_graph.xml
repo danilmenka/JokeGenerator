@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/viewPagerFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.expl.jokegenerator.screen.start.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" />
+    <fragment
+        android:id="@+id/savedJokeFragment"
+        android:name="com.expl.jokegenerator.screen.saved.SavedJokeFragment"
+        android:label="fragment_saved_joke"
+        tools:layout="@layout/fragment_saved_joke" />
+    <fragment
+        android:id="@+id/searchJokeFragment"
+        android:name="com.expl.jokegenerator.screen.search.SearchJokeFragment"
+        android:label="fragment_search_joke"
+        tools:layout="@layout/fragment_search_joke" >
+        <action
+            android:id="@+id/action_searchJokeFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.expl.jokegenerator.screen.viewpager.ViewPagerFragment"
+        android:label="ViewPagerFragment" >
+        <action
+            android:id="@+id/action_viewPagerFragment_to_searchJokeFragment"
+            app:destination="@id/searchJokeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"/>
+    </fragment>
+</navigation>

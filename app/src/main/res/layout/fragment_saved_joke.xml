@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screen.saved.SavedJokeFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/saved_recycler_view"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_joke_saved"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_delete_all"
+        android:clickable="true"
+        android:focusable="true"
+        android:backgroundTint="@color/green_color"
+        android:src="@drawable/ic_delete_all"
+        app:tint="@color/top_black_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/app_margin"
+        android:layout_margin="@dimen/app_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+   <TextView
+       android:id="@+id/txt_list_is_empty"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="@dimen/app_margin"
+       android:textAlignment="center"
+       android:textSize="@dimen/text_size_start"
+       android:textStyle="bold"
+       android:textColor="@color/top_black_color"
+       android:text="@string/no_jokes_saved_text"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:visibility="invisible"
+       />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
